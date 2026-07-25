@@ -1,5 +1,5 @@
 import React from 'react';
-import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {Platform, Pressable, StyleSheet, Text, View} from 'react-native';
 import {colors} from '../../theme/colors';
 import type {TabId} from '../../types';
 
@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: colors.line,
     paddingHorizontal: 8,
+    marginBottom: Platform.OS === 'android' ? 10 : 0,
   },
   tab: {
     flex: 1,

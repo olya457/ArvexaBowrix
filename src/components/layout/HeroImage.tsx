@@ -6,5 +6,5 @@ export function HeroImage({source}: {source: ImageSourcePropType}) {
 }
 
 const styles = StyleSheet.create({
-  image: {height: 285, width: '100%', marginTop: -10, marginBottom: 5},
+  image: {height: 285, width: '100%', marginBottom: 5},
 });

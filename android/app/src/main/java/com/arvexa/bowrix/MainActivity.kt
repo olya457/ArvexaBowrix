@@ -1,4 +1,4 @@
-package com.arvexabowrix
+package com.arvexa.bowrix
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

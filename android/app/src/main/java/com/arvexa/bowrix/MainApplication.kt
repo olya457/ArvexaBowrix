@@ -1,4 +1,4 @@
-package com.arvexabowrix
+package com.arvexa.bowrix
 
 import android.app.Application
 import com.facebook.react.PackageList
