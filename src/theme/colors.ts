@@ -1,5 +1,5 @@
 export const colors = {
-  navy: '#073C60',
+  navy: '#2c2c21ff',
   deep: '#0A2F47',
   card: '#174D6D',
   orange: '#FF9D18',

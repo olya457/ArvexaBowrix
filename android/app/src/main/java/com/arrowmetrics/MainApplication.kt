@@ -1,4 +1,4 @@
-package com.arvexa.bowrix
+package com.arrowmetrics
 
 import android.app.Application
 import com.facebook.react.PackageList

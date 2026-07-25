@@ -1,4 +1,4 @@
-package com.arvexa.bowrix
+package com.arrowmetrics
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
