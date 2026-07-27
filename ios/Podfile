@@ -31,5 +31,33 @@ target 'ArvexaBowrix' do
       :mac_catalyst_enabled => false,
       # :ccache_enabled => true
     )
+
+    # Work around fmt 11.0.2 consteval failures with Apple Clang in Xcode 26.4.
+    installer.pods_project.targets
+      .select { |pod_target| pod_target.name == 'fmt' }
+      .each do |fmt_target|
+        fmt_target.build_configurations.each do |build_configuration|
+          build_configuration.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'c++17'
+        end
+      end
+
+    fmt_base_header = File.join(
+      installer.sandbox.pod_dir('fmt'),
+      'include',
+      'fmt',
+      'base.h'
+    )
+    if File.exist?(fmt_base_header)
+      header_contents = File.read(fmt_base_header)
+      patched_contents = header_contents.gsub(
+        /^#\s*define FMT_USE_CONSTEVAL 1$/,
+        '# define FMT_USE_CONSTEVAL 0'
+      )
+
+      if patched_contents != header_contents
+        File.chmod(0644, fmt_base_header)
+        File.write(fmt_base_header, patched_contents)
+      end
+    end
   end
 end
