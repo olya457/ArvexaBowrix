@@ -1,6 +1,6 @@
 import React from 'react';
-import {AppRoot} from './src/app/AppRoot';
+import {ArvexaBowrixRoot} from './src/bowrixBootstrap/ArvexaBowrixRoot';
 
 export default function App(): React.JSX.Element {
-  return <AppRoot />;
+  return <ArvexaBowrixRoot />;
 }
