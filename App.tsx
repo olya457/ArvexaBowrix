@@ -1,6 +1,6 @@
 import React from 'react';
-import {ArvexaBowrixRoot} from './src/bowrixBootstrap/ArvexaBowrixRoot';
+import {RangeLedgerApp} from './src/app/RangeLedgerApp';
 
 export default function App(): React.JSX.Element {
-  return <ArvexaBowrixRoot />;
+  return <RangeLedgerApp />;
 }

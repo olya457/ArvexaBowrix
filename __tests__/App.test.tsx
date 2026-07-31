@@ -12,11 +12,7 @@ jest.mock('react-native-safe-area-context', () => ({
   SafeAreaView: ({children}: {children: React.ReactNode}) => children,
 }));
 
-jest.mock('react-native-webview', () => ({
-  WebView: () => null,
-}));
-
-test('renders correctly', async () => {
+test('restores data and renders correctly', async () => {
   let renderer: ReactTestRenderer.ReactTestRenderer;
   await ReactTestRenderer.act(async () => {
     renderer = ReactTestRenderer.create(<App />);
